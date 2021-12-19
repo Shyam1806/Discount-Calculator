@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+     <div class="cardpt">
+      <div class="card">
+       <h3>What type of discount</h3>
+       <h5>Original Price</h5>
+       <input type="text"  id="originalbox">
+       <h5>Discount</h5>
+       <input type="text" id="discountbox">
+       <button onclick="discountcl()">Calculate</button>
+   </div>
+   <div class="Cardpt1">
+       <div class="cards">
+           <h4>You Pay</h4>
+           <p id= "dt1">100</p>
+           <h4>You re Saving</h4>
+           <p id="dt2">200</p>
+       </div>
+   </div>
+     </div>
+     <script>
+         function discountcl(){
+            
+           var op = document.getElementById("originalbox").value;
+        //    document.getElementById("originalbox").value ="";
+           var dt = document.getElementById("discountbox").value;
+        //    document.getElementById("discountbox").value = "";
+           var td = dt/100;
+             
+           if( dt < 100){
+               alert("error");
+              
+               var savings = (op * td);
+              document.getElementById("dt2").innerHTML = savings;
+
+              var ypay = (op - savings);
+              document.getElementById("dt1").innerHTML = ypay;
+           }
+          
+         
+    
+              
+         }
+     </script>
+    </body>
+</html>
